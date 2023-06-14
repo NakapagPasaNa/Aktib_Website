@@ -5,12 +5,13 @@
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 5%;
+  padding: 4rem;
 
   .description {
     min-width: 450px;
+    max-width: 550px;
     overflow: hidden;
-    margin-right: 10rem;
+    margin-right: 7rem;
 
     h1 {
       color: #EF6F13;
@@ -21,15 +22,21 @@
     p {
       margin-bottom: 2rem;
       color: white;
-    }
+    } 
     button {
+      position: absolute;
       background-image: linear-gradient(162.75deg, #141919 -23.51%, #EF6F13 273.27%);
       border: none;
       color: white;
       padding: .5rem 1rem;
       font-size: 1rem;
     }
+    button:hover {
+      cursor: pointer;
+      transform: scale(1.1);
+    }
   }
+
 
   .bmi {
     min-width: 50%;
@@ -38,28 +45,35 @@
     display: flex;
     align-items: center;
 
-    .bmi_container {
-      position: absolute;
-      border-radius: .5rem;
-      text-align: center;
-      min-width: 50px;
-      background-color: white;
-      padding: 1rem;
+    a {
+      text-decoration: none;
+      color: black;
 
-    }
-    .bmi_container > :nth-child(1) {
-      margin-bottom: 1rem;
-    }
-    .bmi_container > :nth-child(3) {
-      color: #EF6F13;
-      font-size: 2rem;
+      .bmi_container {
+        position: absolute;
+        top: 40%;
+        border-radius: .5rem;
+        text-align: center;
+        min-width: 50px;
+        background-color: white;
+        padding: 1rem;
+        z-index: 1;
+  
+      }
+      .bmi_container > :nth-child(1) {
+        margin-bottom: 1rem;
+      }
+      .bmi_container > :nth-child(3) {
+        color: #EF6F13;
+        font-size: 2rem;
+      }
     }
 
     .exercises {
       border-radius: .8rem;
       position: absolute;
       top: 10%;
-      left: 60%;
+      left: 25rem;
       background-color: white;
       min-width: 250px;
       padding: .5rem;
@@ -77,7 +91,7 @@
 
       .options {
         display: grid;
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(3, 90px);
         gap: .5rem;
 
         .op1 {
@@ -100,7 +114,7 @@
     height: 90%;
     top: 5%;
     left: 10%;
-    
+
   }
 }
 

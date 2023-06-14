@@ -3,6 +3,7 @@ html {
   font-size: 100%;
   box-sizing: border-box;
   overscroll-behavior: none;
+  scroll-behavior: smooth;
 }
 
 *, *::before, *::after {
@@ -30,12 +31,13 @@ p {
   display: flex;
   align-items: center;
   flex-wrap: nowrap;
-  padding: 5%;
+  padding: 4rem;
 }
 .homepage .description {
   min-width: 450px;
+  max-width: 550px;
   overflow: hidden;
-  margin-right: 10rem;
+  margin-right: 7rem;
 }
 .homepage .description h1 {
   color: #EF6F13;
@@ -47,11 +49,16 @@ p {
   color: white;
 }
 .homepage .description button {
+  position: absolute;
   background-image: linear-gradient(162.75deg, #141919 -23.51%, #EF6F13 273.27%);
   border: none;
   color: white;
   padding: 0.5rem 1rem;
   font-size: 1rem;
+}
+.homepage .description button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 .homepage .bmi {
   min-width: 50%;
@@ -60,18 +67,24 @@ p {
   display: flex;
   align-items: center;
 }
-.homepage .bmi .bmi_container {
+.homepage .bmi a {
+  text-decoration: none;
+  color: black;
+}
+.homepage .bmi a .bmi_container {
   position: absolute;
+  top: 40%;
   border-radius: 0.5rem;
   text-align: center;
   min-width: 50px;
   background-color: white;
   padding: 1rem;
+  z-index: 1;
 }
-.homepage .bmi .bmi_container > :nth-child(1) {
+.homepage .bmi a .bmi_container > :nth-child(1) {
   margin-bottom: 1rem;
 }
-.homepage .bmi .bmi_container > :nth-child(3) {
+.homepage .bmi a .bmi_container > :nth-child(3) {
   color: #EF6F13;
   font-size: 2rem;
 }
@@ -79,7 +92,7 @@ p {
   border-radius: 0.8rem;
   position: absolute;
   top: 10%;
-  left: 60%;
+  left: 25rem;
   background-color: white;
   min-width: 250px;
   padding: 0.5rem;
@@ -96,7 +109,7 @@ p {
 }
 .homepage .bmi .exercises .options {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(3, 90px);
   gap: 0.5rem;
 }
 .homepage .bmi .exercises .options .op1 {
@@ -140,7 +153,7 @@ main {
 }
 main .section1 {
   min-width: 650px;
-  max-width: 50%;
+  max-width: 700px;
 }
 main .section1 h2 {
   font-size: 3rem;
@@ -153,7 +166,7 @@ main .section1 h2 span {
 }
 main .section1 .images-container {
   position: relative;
-  margin-bottom: 6rem;
+  margin-bottom: 15%;
   height: 50vh;
 }
 main .section1 .images-container .img1 {
@@ -258,6 +271,10 @@ main .section2 .download button {
   padding: 0.5rem 1rem;
   font-weight: bold;
   font-size: 1.2rem;
+}
+main .section2 .download button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
 }
 
 footer {
