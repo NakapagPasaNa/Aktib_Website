@@ -1,6 +1,11 @@
 footer {
   background-color:#292929;
 
+  @media(max-width: 375px) {
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
   ul {
     min-width: 800px;
     position: relative;
